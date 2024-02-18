@@ -13,7 +13,9 @@ mod alg_binary_search{
     /// Временная сложность алгоритма - логарифмическая O(log N)
     /// каждая итерация сокращает вдвое количество элементов/значение
     ///
-    pub fn binary_search(k: i32, items: &[i32]) -> Option<usize> {
+    pub fn binary_search<T>(k: T, items: &[T]) -> Option<usize>  
+       where T: PartialOrd + Ord
+    {
         let mut low: usize = 0;
         let mut high: usize = items.len();
 
@@ -28,7 +30,7 @@ mod alg_binary_search{
         None
     }
 
-    pub fn binary_search2<T>(target: &T, arr: &[T]) -> Result<usize, usize>
+    pub fn binary_search2<T>(target: &T, arr: &[T]) -> Result<usize, usize> 
         where
             T: PartialOrd,
     {
@@ -57,7 +59,37 @@ mod alg_binary_search{
     }
 }
 
-/// $ cargo  +nightly test --lib algorithms::binary_search::test 
+//Recursive
+pub use alg_binary_search_reqursive::binary_search_reqursive;
+mod alg_binary_search_reqursive{
+    pub fn binary_search_reqursive<T>(x: T, arr:&[T]) -> Option<usize>  
+        where T: PartialOrd
+    {
+        if arr.len() == 0{
+            return None;
+        }
+        fn search<T>(arr:&[T], left: usize, right: usize, x: T) -> Option<usize>  
+            where T: PartialOrd
+        { 
+            if right>=left { 
+                let mid = left + (right - left)/2; 
+                if arr[mid] == x {
+                    return Some(mid); 
+                }
+                if arr[mid] > x && mid > 0 {
+                return search(arr, left, mid-1, x); 
+                } else {
+                    return search(arr, mid+1, right, x); 
+                }
+            } 
+            return None; 
+        } 
+        search(arr,0,arr.len()-1,x)
+    }
+      
+}
+
+/// $ cargo test search::binary_search 
 #[cfg(test)]
 mod test {
     use super::*;
@@ -96,5 +128,23 @@ mod test {
         assert_eq!(Err(0), binary_search2(&1, &items));
 
         assert_eq!(Err(0), binary_search2(&1, &[]));
+    }
+
+    #[test]
+    fn test_binary_search_req() {
+        let items = vec![1, 2, 3, 4, 5];
+        assert_eq!(Some(0), binary_search_reqursive(1, &items));
+        assert_eq!(Some(1), binary_search_reqursive(2, &items));
+        assert_eq!(Some(2), binary_search_reqursive(3, &items));
+        assert_eq!(Some(3), binary_search_reqursive(4, &items));
+        assert_eq!(Some(4), binary_search_reqursive(5, &items));
+        assert_eq!(None, binary_search_reqursive(0, &items));
+        assert_eq!(None, binary_search_reqursive(90, &items));
+        assert_eq!(None, binary_search_reqursive(9000000, &items));
+ 
+        let items = vec![2, 4, 6, 80, 90, 120, 180, 900, 2000, 4000, 5000, 60000];
+        assert_eq!(None, binary_search_reqursive(1, &items));
+
+        assert_eq!(None, binary_search_reqursive(1, &[]));
     }
 }
