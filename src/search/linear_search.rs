@@ -1,3 +1,5 @@
+#![allow(dead_code)]
+
 pub use ds_linear_search::linear_search;
 /// Последовательный поиск `O(N)`
 mod ds_linear_search{
@@ -14,7 +16,7 @@ mod ds_linear_search{
     }
 }
 
-/// $ cargo +nightly test --lib algorithms::linear_search
+/// $ cargo test search::linear_search::tests::test_linear_search
 #[cfg(test)]
 mod tests {
     use super::*;

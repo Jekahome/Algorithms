@@ -1,3 +1,4 @@
+#![allow(dead_code)]
 
 pub use ds_quick_sort::quick_sort;
 pub use ds_quick_sort_async::quick_sort_async;
