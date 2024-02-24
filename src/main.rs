@@ -1,8 +1,8 @@
 mod blacktracking;
+mod divide_and_conquer;
 mod dynamic_programming;
 mod search;
 mod sort;
-mod divide_and_conquer;
 
 fn main() {
     println!("Hello, world!");

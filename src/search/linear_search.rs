@@ -2,10 +2,10 @@
 
 pub use ds_linear_search::linear_search;
 /// Последовательный поиск `O(N)`
-mod ds_linear_search{
+mod ds_linear_search {
     pub fn linear_search<T>(target: &T, arr: &[T]) -> Option<usize>
-        where
-            T: PartialEq,
+    where
+        T: PartialEq,
     {
         for (index, item) in arr.iter().enumerate() {
             if item == target {

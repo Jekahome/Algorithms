@@ -1,11 +1,9 @@
-
 ///
-/// Бинарный поиск — это эффективный алгоритм поиска элемента в отсортированном списке. 
+/// Бинарный поиск — это эффективный алгоритм поиска элемента в отсортированном списке.
 /// Он работает путем многократного деления пополам искомой части массива, пока не будет найдено искомое значение.
-/// 
-
-pub use alg_binary_search::{binary_search,binary_search2};
-mod alg_binary_search{
+///
+pub use alg_binary_search::{binary_search, binary_search2};
+mod alg_binary_search {
     use std::cmp::Ordering;
 
     ///
@@ -13,8 +11,9 @@ mod alg_binary_search{
     /// Временная сложность алгоритма - логарифмическая O(log N)
     /// каждая итерация сокращает вдвое количество элементов/значение
     ///
-    pub fn binary_search<T>(k: T, items: &[T]) -> Option<usize>  
-       where T: PartialOrd + Ord
+    pub fn binary_search<T>(k: T, items: &[T]) -> Option<usize>
+    where
+        T: PartialOrd + Ord,
     {
         let mut low: usize = 0;
         let mut high: usize = items.len();
@@ -30,9 +29,9 @@ mod alg_binary_search{
         None
     }
 
-    pub fn binary_search2<T>(target: &T, arr: &[T]) -> Result<usize, usize> 
-        where
-            T: PartialOrd,
+    pub fn binary_search2<T>(target: &T, arr: &[T]) -> Result<usize, usize>
+    where
+        T: PartialOrd,
     {
         let mut size = arr.len();
         if size == 0 {
@@ -61,35 +60,36 @@ mod alg_binary_search{
 
 //Recursive
 pub use alg_binary_search_reqursive::binary_search_reqursive;
-mod alg_binary_search_reqursive{
-    pub fn binary_search_reqursive<T>(x: T, arr:&[T]) -> Option<usize>  
-        where T: PartialOrd
+mod alg_binary_search_reqursive {
+    pub fn binary_search_reqursive<T>(x: T, arr: &[T]) -> Option<usize>
+    where
+        T: PartialOrd,
     {
-        if arr.len() == 0{
+        if arr.len() == 0 {
             return None;
         }
-        fn search<T>(arr:&[T], left: usize, right: usize, x: T) -> Option<usize>  
-            where T: PartialOrd
-        { 
-            if right>=left { 
-                let mid = left + (right - left)/2; 
+        fn search<T>(arr: &[T], left: usize, right: usize, x: T) -> Option<usize>
+        where
+            T: PartialOrd,
+        {
+            if right >= left {
+                let mid = left + (right - left) / 2;
                 if arr[mid] == x {
-                    return Some(mid); 
+                    return Some(mid);
                 }
                 if arr[mid] > x && mid > 0 {
-                return search(arr, left, mid-1, x); 
+                    return search(arr, left, mid - 1, x);
                 } else {
-                    return search(arr, mid+1, right, x); 
+                    return search(arr, mid + 1, right, x);
                 }
-            } 
-            return None; 
-        } 
-        search(arr,0,arr.len()-1,x)
+            }
+            return None;
+        }
+        search(arr, 0, arr.len() - 1, x)
     }
-      
 }
 
-/// $ cargo test search::binary_search 
+/// $ cargo test search::binary_search
 #[cfg(test)]
 mod test {
     use super::*;
@@ -111,7 +111,7 @@ mod test {
 
         assert_eq!(None, binary_search(1, &[]));
     }
-    
+
     #[test]
     fn test_binary_search2() {
         let items = vec![1, 2, 3, 4, 5];
@@ -141,7 +141,7 @@ mod test {
         assert_eq!(None, binary_search_reqursive(0, &items));
         assert_eq!(None, binary_search_reqursive(90, &items));
         assert_eq!(None, binary_search_reqursive(9000000, &items));
- 
+
         let items = vec![2, 4, 6, 80, 90, 120, 180, 900, 2000, 4000, 5000, 60000];
         assert_eq!(None, binary_search_reqursive(1, &items));
 

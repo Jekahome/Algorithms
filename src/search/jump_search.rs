@@ -1,45 +1,46 @@
-
 pub use algo_jump_search::jump_search;
-mod algo_jump_search{
- 
-    pub fn jump_search<T>(x: &T, arr: &[T]) -> Option<usize> 
-        where T: PartialOrd
-   { 
-        let n = arr.len(); 
+mod algo_jump_search {
+
+    pub fn jump_search<T>(x: &T, arr: &[T]) -> Option<usize>
+    where
+        T: PartialOrd,
+    {
+        let n = arr.len();
         if n == 0 {
             return None;
         }
-        if &arr[0] == x{
-            return Some(0); 
-        } 
-        let mut step = (n as f64).sqrt().floor() as usize;  
-        if n <= 10{
+        if &arr[0] == x {
+            return Some(0);
+        }
+        let mut step = (n as f64).sqrt().floor() as usize;
+        if n <= 10 {
             step = 1;
         }
         let mut prev = 0;
         let mut i = 0;
-        
-        while i < n && &arr[i] < x{
+
+        while i < n && &arr[i] < x {
             prev = i;
             i += step;
-        } 
-        
-        if i >= n {return None;}
-    
-        loop{
-                prev+=1;
-                if &arr[prev] < x && prev < i{
-                    prev+=1;
-                }else{
-                    break;
-                } 
+        }
+
+        if i >= n {
+            return None;
+        }
+
+        loop {
+            prev += 1;
+            if &arr[prev] < x && prev < i {
+                prev += 1;
+            } else {
+                break;
             }
-        if &arr[prev] == x{
+        }
+        if &arr[prev] == x {
             return Some(prev);
         }
         None
-   } 
-   
+    }
 }
 
 /// $ cargo test search::jump_search

@@ -2,15 +2,15 @@ pub use ds_bucket_sort::bucket_sort;
 
 /// Bucket sort Ковшовая сортировка
 /// Также известна как bin sort
-mod ds_bucket_sort{
+mod ds_bucket_sort {
     /// * `arr` - Collection of value to be sorted in place.
     /// * `hasher` - Function hashing to map elements to correspoding buckets.
     /// Ref: https://codereview.stackexchange.com/a/145124
     pub fn bucket_sort<H, F, T>(arr: &mut [T], hasher: F)
-        where
-            H: Ord,
-            F: Fn(&T) -> H,
-            T: Ord + Clone,
+    where
+        H: Ord,
+        F: Fn(&T) -> H,
+        T: Ord + Clone,
     {
         // 1. Create buckets.
         let mut buckets: Vec<Bucket<H, T>> = Vec::new();
@@ -63,21 +63,21 @@ mod ds_bucket_sort{
     }
 }
 
-/// $ cargo +nightly test --lib algorithms::bucket_sort::test 
+/// $ cargo +nightly test --lib algorithms::bucket_sort::test
 #[cfg(test)]
 mod test {
     use super::*;
 
     #[test]
-    fn test_bucket_sort(){
+    fn test_bucket_sort() {
         let mut items = vec![1, 8, 2, 4, 5];
-        let f = |int:&i32| int / 4; 
-        bucket_sort(&mut items,f);
-        assert_eq!(vec![1,2,4,5,8],items);
+        let f = |int: &i32| int / 4;
+        bucket_sort(&mut items, f);
+        assert_eq!(vec![1, 2, 4, 5, 8], items);
 
-        let mut items = vec![(1,8),(2,4),(5,2),(1,1)];
-        let f = |t:&(i32,i32)| t.0 / 4;
-        bucket_sort(&mut items,f);
-        assert_eq!(vec![(1,1),(1,8),(2,4),(5,2)],items);
+        let mut items = vec![(1, 8), (2, 4), (5, 2), (1, 1)];
+        let f = |t: &(i32, i32)| t.0 / 4;
+        bucket_sort(&mut items, f);
+        assert_eq!(vec![(1, 1), (1, 8), (2, 4), (5, 2)], items);
     }
 }
