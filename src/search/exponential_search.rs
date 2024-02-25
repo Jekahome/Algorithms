@@ -42,7 +42,7 @@ mod algo_exponential_search {
     }
 }
 
-/// $ cargo test search::exponential_search
+/// $ cargo test exponential_search
 #[cfg(test)]
 mod test {
     use super::*;

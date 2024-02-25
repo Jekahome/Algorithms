@@ -89,7 +89,7 @@ mod alg_binary_search_reqursive {
     }
 }
 
-/// $ cargo test search::binary_search
+/// $ cargo test binary_search
 #[cfg(test)]
 mod test {
     use super::*;

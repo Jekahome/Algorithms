@@ -43,7 +43,7 @@ mod algo_jump_search {
     }
 }
 
-/// $ cargo test search::jump_search
+/// $ cargo test jump_search
 #[cfg(test)]
 mod tests {
     use super::*;

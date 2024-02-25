@@ -28,7 +28,7 @@ mod algo_interpolation_search {
     }
 }
 
-/// $ cargo test search::interpolation_search
+/// $ cargo test interpolation_search
 #[cfg(test)]
 mod test {
     use super::*;

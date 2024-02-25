@@ -16,7 +16,7 @@ mod ds_linear_search {
     }
 }
 
-/// $ cargo test search::linear_search::tests::test_linear_search
+/// $ cargo test linear_search
 #[cfg(test)]
 mod tests {
     use super::*;
