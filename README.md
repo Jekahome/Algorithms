@@ -85,6 +85,8 @@
 
     [Introduction to Greedy Algorithm](https://www.geeksforgeeks.org/introduction-to-greedy-algorithm-data-structures-and-algorithm-tutorials/)
 
+    [Greedy Algorithm](https://www.programiz.com/dsa/greedy-algorithm)
+
 - **Blacktracking** - (поиск с возвратом) оптимизация `Brute-Force` отменяя отдельные затратные операции еще до начала их выполнения. Т.е. отбросить заведомо неверный путь, недопустив затрат на его расчет еще до начала самого расчета. Это общий метод нахождения решений задачи, в которой требуется полный перебор всех возможных вариантов в некотором множестве М. 
 Это сама по себе рекурсия, но здесь есть некоторые дополнительные условия, которые делают ее более эффективной.
 
