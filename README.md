@@ -176,6 +176,8 @@
 
 ## Bit Manipulation / Bit Masking:
 
+Чтобы две цифры от 0-9 можно было закодировать в одном байте
+
 ```
 AND (&)
 OR (|)
@@ -207,10 +209,8 @@ Right Shift(>>)
 -  `O(n!)`, факториал 10 000 000 000 000 000 000 000 000 ... операций
 
 
-
 ![Comparison of algorithms.](https://github.com/Jekahome/Algorithms/blob/main/_img/algo.jpg "Comparison of algorithms.")
 
- 
 ## Асимптотическая сложность ф-ций в нотации Big-O:
 
 1. константная `O(1)` 
