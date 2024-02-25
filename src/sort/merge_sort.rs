@@ -105,7 +105,7 @@ mod ds_merge_sort {
     }
 }
 
-/// $ cargo +nightly test --lib algorithms::merge_sort::test
+/// $ cargo test merge_sort
 #[cfg(test)]
 mod test {
     use super::*;

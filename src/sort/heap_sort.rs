@@ -140,12 +140,11 @@ mod ds_heap_sort {
     }
 }
 
-/// $ cargo +nightly test --lib algorithms::heap_sort::test
+/// $ cargo test heap_sort
 #[cfg(test)]
 mod test {
     use super::*;
 
-    /// $ cargo +nightly test --lib algorithms::heap_sort::test::test_heap_sort
     #[test]
     fn test_heap_sort() {
         let mut items: Vec<i32> = vec![14, 61, 85, 24, 74, 26, 17, 50, 40, 45, 21, 32, 59, 58, 13];
@@ -155,7 +154,7 @@ mod test {
             vec![13, 14, 17, 21, 24, 26, 32, 40, 45, 50, 58, 59, 61, 74, 85]
         );
     }
-    /// $ cargo +nightly test --lib algorithms::heap_sort::test::test_heap_sort_g
+
     #[test]
     fn test_heap_sort_g() {
         let mut items: Vec<i32> = vec![14, 61, 85, 24, 74, 26, 17, 50, 40, 45, 21, 32, 59, 58, 13];

@@ -63,7 +63,7 @@ mod ds_bucket_sort {
     }
 }
 
-/// $ cargo +nightly test --lib algorithms::bucket_sort::test
+/// $ cargo test bucket_sort
 #[cfg(test)]
 mod test {
     use super::*;

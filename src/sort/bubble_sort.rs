@@ -229,7 +229,7 @@ mod alg_bubble_sort {
     }
 }
 
-/// $ cargo +nightly test --lib algorithms::bubble_sort::test
+/// $ cargo test bubble_sort
 #[cfg(test)]
 mod test {
     use super::*;

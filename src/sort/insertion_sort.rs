@@ -41,7 +41,7 @@ mod ds_insertion_sort {
     }
 }
 
-/// $ cargo +nightly test --lib algorithms::insertion_sort::test
+/// $ cargo test insertion_sort
 #[cfg(test)]
 mod test {
     use super::*;

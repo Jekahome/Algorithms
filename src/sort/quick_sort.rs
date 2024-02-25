@@ -235,7 +235,8 @@ mod ds_quick_sort_easy {
         p
     }
 }
-/// $ cargo +nightly test --lib algorithms::quick_sort::test
+
+/// $ cargo test quick_sort
 #[cfg(test)]
 mod test {
     use super::*;

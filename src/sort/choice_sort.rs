@@ -48,37 +48,10 @@ mod alg_choice_sort {
             i += 1;
         }
     }
-    /*
-    pub fn choice_sort2(arr:&mut Vec<i32>){
-        let size_ = arr.len()-1;
-        let mut ex:bool;
-        let mut indx;
-        let mut j=0;
-        let mut i=0;
-        let mut min;
-        while i<size_{
-            ex=true;
-            min=arr[i];
-            indx=i;
-
-            j=i+1;
-            while j<size_{
-                if min>arr[j] {
-                    min=arr[j];
-                    indx=j;
-                    ex=false;
-                }
-                j+=1;
-            }
-            arr[indx]=arr[i];
-            arr[i]=min;
-            i+=1;
-        }
-    }
-    */
+     
 }
 
-/// $ cargo +nightly test --lib algorithms::choice_sort::test
+/// $ cargo test choice_sort
 #[cfg(test)]
 mod test {
     use super::*;
@@ -89,10 +62,4 @@ mod test {
         choice_sort(&mut items);
         assert_eq!(vec![1, 2, 4, 5, 8], items);
     }
-    /*  #[test]
-    fn test_choice_sort2(){
-        let mut items = vec![1, 8, 2, 4, 5];
-        choice_sort2(&mut items);
-        assert_eq!(vec![1,2,4,5,8],items);
-    }*/
 }

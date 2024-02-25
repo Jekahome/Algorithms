@@ -147,7 +147,7 @@ mod ds_counting_sort {
     }
 }
 
-/// $ cargo +nightly test --lib algorithms::counting_sort::test
+/// cargo test counting_sort 
 #[cfg(test)]
 mod test {
     use super::*;
@@ -165,21 +165,11 @@ mod test {
         v
     }
 
-    // cargo +nightly test --lib algorithms::counting_sort::test::test_counting_sort_opt -- --nocapture
     #[test]
     fn test_counting_sort_opt() {
-        /*
-            let mut items = gen_vec();
-            let mut items = vec![999999_u32, 2046506772, 585238740, 3207941434, 3855811927];
-            let max = *items.iter().max().unwrap() as usize;
-            println!("max={} {:?}",max,items);
-            let f =  |int:&u32| *int as usize;
-            counting_sort(&mut items,max,f);
-        */
-
-        let mut items = gen_vec();
+        let mut items = vec![1, 8, 2, 4, 5];
         counting_sort_opt(&mut items);
-        assert!(true);
+        assert_eq!(vec![1, 2, 4, 5, 8], items);
     }
 
     #[test]
