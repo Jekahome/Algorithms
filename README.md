@@ -1,4 +1,16 @@
+# Algorithms
 
+* [Зачем изучать алгоритмы?](https://github.com/Jekahome/Algorithms#зачем-изучать-алгоритмы)
+* [Книги про алгоритмы](https://github.com/Jekahome/Algorithms#книги-про-алгоритмы)
+* [Алгоритмические метод решения задач](https://github.com/Jekahome/Algorithms#алгоритмические-метод-решения-задач)
+* [Sorting Algorithms](https://github.com/Jekahome/Algorithms#sorting-algorithms)
+* [Searching Algorithms](https://github.com/Jekahome/Algorithms#searching-algorithms)
+* [Bit Manipulation/Bit Masking](https://github.com/Jekahome/Algorithms#bit-manipulation--bit-masking)
+* [Комбинаторика](https://github.com/Jekahome/Algorithms#комбинаторика)
+* [Задача NP-полная](https://github.com/Jekahome/Algorithms#задача-np-полная-np-complete-problem)
+* [Асимптотическая сложность алгоритмов](https://github.com/Jekahome/Algorithms#асимптотическая-сложность-алгоритмов)
+* [Асимптотическая сложность ф-ций в нотации Big-O](https://github.com/Jekahome/Algorithms#асимптотическая-сложность-ф-ций-в-нотации-big-o)
+ 
 ## Зачем изучать алгоритмы?
 - Алгоритмы - это про способ мыслить о программах
 - Вы сможете писать оптимизированный и масштабируемый код - получив знания о различных структурах данных и алгоритмах, вы можете определить, какую выбрать структуру данных и алгоритм в различных условиях.
