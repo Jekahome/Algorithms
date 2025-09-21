@@ -10,7 +10,8 @@
 * [Задача NP-полная](https://github.com/Jekahome/Algorithms#задача-np-полная-np-complete-problem)
 * [Асимптотическая сложность алгоритмов](https://github.com/Jekahome/Algorithms#асимптотическая-сложность-алгоритмов)
 * [Асимптотическая сложность ф-ций в нотации Big-O](https://github.com/Jekahome/Algorithms#асимптотическая-сложность-ф-ций-в-нотации-big-o)
- 
+* [Top 20 LeetCode Patterns](https://github.com/Jekahome/Algorithms#top-20-leetcodepatterns)
+
 ## Зачем изучать алгоритмы?
 - Алгоритмы - это про способ мыслить о программах
 - Вы сможете писать оптимизированный и масштабируемый код - получив знания о различных структурах данных и алгоритмах, вы можете определить, какую выбрать структуру данных и алгоритм в различных условиях.
@@ -511,6 +512,192 @@ fn factorial(n: i32) {
 ```
 
 </details>
+
+## Top 20 LeetCode Patterns
+
+
+
+### 1. **Два указателя (Two Pointers)**
+
+* Задачи на отсортированные массивы, подстроки, удаление дубликатов.
+* Примеры:
+
+  * Remove Duplicates from Sorted Array
+  * 3Sum
+
+
+### 2. **Скользящее окно (Sliding Window)**
+
+* Поиск подотрезков массива/строки с нужными свойствами.
+* Примеры:
+
+  * Longest Substring Without Repeating Characters
+  * Minimum Window Substring
+
+
+### 3. **Бинарный поиск (Binary Search)**
+
+* Не только на числах, но и на "ответе" (Binary Search on Answer).
+* Примеры:
+
+  * Search in Rotated Sorted Array
+  * Median of Two Sorted Arrays
+
+
+### 4. **Двоичный поиск по ответу (Binary Search on Answer)**
+
+* Задачи типа "минимизируй/максимизируй условие".
+* Примеры:
+
+  * Koko Eating Bananas
+  * Split Array Largest Sum
+
+
+### 5. **Сортировка + Жадный алгоритм (Sorting + Greedy)**
+
+* Когда порядок важен для оптимального решения.
+* Примеры:
+
+  * Meeting Rooms II
+  * Non-overlapping Intervals
+
+
+### 6. **Хеш-таблицы / Множества (Hashing)**
+
+* Быстрая проверка принадлежности, подсчёты.
+* Примеры:
+
+  * Two Sum
+  * Group Anagrams
+
+
+### 7. **Стек (Stack)**
+
+* Для пар скобок, монотонных стеков, Next Greater Element.
+* Примеры:
+
+  * Valid Parentheses
+  * Largest Rectangle in Histogram
+
+
+### 8. **Очередь / Дек (Queue / Deque)**
+
+* Особенно для Sliding Window Maximum.
+* Примеры:
+
+  * Sliding Window Maximum
+  * Rotting Oranges
+
+
+### 9. **Динамическое программирование (DP)**
+
+* Подразделы:
+
+  * 1D DP (Fibonacci, House Robber)
+  * 2D DP (Unique Paths, Coin Change)
+  * DP на подстроках (Palindrome Partitioning)
+
+
+### 10. **Разделяй и властвуй (Divide & Conquer)**
+
+* Быстрые сортировки, работа с деревьями, подзадачи.
+* Примеры:
+
+  * Merge Sort
+  * Maximum Subarray (Kadane / Divide & Conquer версия)
+
+
+### 11. **DFS (поиск в глубину)**
+
+* Графы, матрицы, деревья.
+* Примеры:
+
+  * Number of Islands
+  * Path Sum
+
+---
+
+### 12. **BFS (поиск в ширину)**
+
+* Кратчайшие пути, уровневый обход.
+* Примеры:
+
+  * Word Ladder
+  * Binary Tree Level Order Traversal
+
+
+### 13. **Backtracking**
+
+* Перестановки, комбинации, N-Queens.
+* Примеры:
+
+  * Permutations
+  * Combination Sum
+
+
+### 14. **Union-Find (Disjoint Set Union)**
+
+* Классификация графов, острова, Kruskal.
+* Примеры:
+
+  * Number of Connected Components in Graph
+  * Redundant Connection
+
+
+### 15. **Topological Sort (Kahn / DFS)**
+
+* Задачи на зависимости.
+* Примеры:
+
+  * Course Schedule
+  * Alien Dictionary
+
+
+### 16. **Деревья поиска (BST)**
+
+* Вставки, удаления, поиск K-th smallest/largest.
+* Примеры:
+
+  * Validate BST
+  * Lowest Common Ancestor of a BST
+
+
+### 17. **Heap / Приоритетная очередь**
+
+* k-элементов, медианы, интервалы.
+* Примеры:
+
+  * Merge k Sorted Lists
+  * Find Median from Data Stream
+
+
+### 18. **Prefix Sum / Difference Array**
+
+* Для подотрезков чисел или строк.
+* Примеры:
+
+  * Subarray Sum Equals K
+  * Range Sum Query
+
+
+### 19. **Bit Manipulation**
+
+* Побитовые операции, подмножества.
+* Примеры:
+
+  * Single Number
+  * Subsets II
+
+
+### 20. **Математика и геометрия**
+
+* Часто хитрые задачи решаются через формулы.
+* Примеры:
+
+  * Pow(x, n)
+  * Rotate Image
+
+p.s. учебный роадмап с подборкой 1–2 классических задач по каждому паттерну
 
 
 ### Links
